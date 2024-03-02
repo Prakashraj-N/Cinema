@@ -20,6 +20,8 @@
 
 
 
+
+
 .nav{
   background-color: #161212;
   display:flex;
@@ -503,6 +505,11 @@
   .main-cont{
     width: 100%;
     
+  }
+
+  .main-cont-l{
+
+    width: 100%;
   }
 
   .main-1-block{
