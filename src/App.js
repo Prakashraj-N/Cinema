@@ -10,7 +10,18 @@ function App() {
   function maintainMode (){
     setmode(!mode);
 
-    console.log(mode)
+    
+  }
+
+
+  const [side,setside] = useState(false);
+  function maintainSide (){
+    setside(!side);
+
+
+    console.log(side)
+
+    
   }
 
 
@@ -19,8 +30,8 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar maintainMode={maintainMode} mode={mode}/>
-      <Main mode={mode}/>
+      <Navbar maintainMode={maintainMode} maintainSide={maintainSide} mode={mode}/>
+      <Main mode={mode} side={side} />
       
     </div>
   );

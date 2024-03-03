@@ -10,7 +10,7 @@ import thuppaki from "./thuppaki.png"
 
 
 
-function Main({mode}){
+function Main({side}){
 
     
     const sidebar = [
@@ -126,7 +126,7 @@ function Main({mode}){
 
     return(
         <div className="main">
-            <div className={mode ? "main-cont" : "main-cont-l"}>
+            <div className={side ? "main-cont-s" : "main-cont"}>
                 <div className="banner">
                     <div className="ban-img-1">
                         <div className="ban-div">
@@ -198,16 +198,16 @@ function Main({mode}){
 
             </div>
 
-            <div className="sidebar">
+            <div className={side ? "sidebar-s" : "sidebar"}>
                 <div className="side-top">
                     <button className="s-button">Action</button>
-                    <button className="s-button">Romance</button>
+                    
                     <button className="s-button">Comey</button>
                     <button className="s-button">Sci-Fi</button>
                     <button className="s-button">Thriller</button>
                     <button className="s-button">Fantasy</button>
                     <button className="s-button">Drama</button>
-                    <button className="s-button">Biography</button>
+                    
                     <button className="s-button">Crime</button>
                     <button className="s-button">History</button>
 

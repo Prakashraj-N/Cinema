@@ -4,9 +4,9 @@ import { MdOutlineLight } from "react-icons/md";
 
 
 
-function Navbar({maintainMode,mode}){
+function Navbar({maintainMode,mode,maintainSide}){
     return (
-        <div className={mode ? "nav" : "nav-l"}>
+        <div className="nav" >
             <div className="logo">
                 <p className="logo-n">CINEMA</p>
             </div>
@@ -20,8 +20,9 @@ function Navbar({maintainMode,mode}){
                 <input className="search" type="search" placeholder="search"></input>
             </div>
             <div className="nav-other">
-                <button onClick={maintainMode} className="dark"><MdOutlineLight/></button>
+                
                 <button className="register"><sapn className="A" >C</sapn><sapn className="reg">Register</sapn></button>
+                <button  className="register" onClick={maintainSide}><sapn className="A" >M</sapn><sapn className="reg">Menu</sapn></button>
 
             </div>
 
