@@ -162,6 +162,7 @@
   width:98%;
   height:90%;
   background-size: cover;
+  
   display:flex;
   flex-direction: column;
   
@@ -237,7 +238,10 @@
   display: flex;
   justify-content: space-around;
   font-weight: bold;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
   
+  backdrop-filter: blur(5px);
   
   
   
@@ -257,6 +261,8 @@
   justify-content: space-around;
   margin-bottom: 10px;
   align-items: center;
+
+  
 
 }
 .ban-button{
@@ -283,8 +289,11 @@
   background-color: rgb(49, 48, 48);
   
   
+  height: 100%;
+  width:0%;
+ 
 
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items:center;
@@ -373,6 +382,7 @@
   align-items: center;
   gap:20px;
   overflow: scroll;
+  transition: 1s;
   
 
 }
@@ -454,6 +464,10 @@
   display: none;
 }
 
+.star{
+  color: rgb(207, 5, 5);
+}
+
 
 
 
@@ -490,7 +504,12 @@
 @media (max-width:600px){
 
   
-
+  .main{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+   
+  }
 
 
   .nav-li{
@@ -502,33 +521,38 @@
     display: none;
   }
 
-  .sidebar-s{
-    width:50%
+  .sidebar{
     
+    width: 100%;
+    height: 0%;
+    
+  }
+
+
+  .sidebar-s{
+    width: 100%;
+    height: 70%;
   }
 
   .side-top{
     width:100%;
-    gap:10px
+    height: 80px ;
+    gap:10px;
+    margin-bottom: 0px;
   }
 
-  .side-blk{
-    width: 90%;
-  }
+ 
 
-
-  .blk-det{
-    display:none;
-  }
-
+ 
 
   .blk-img{
-    width: 100%;
+    width: 100px;
   }
 
 
   .s-button{
-    font-size: 10px;
+    font-size: 12px;
+    width:20%
   }
 
 
@@ -537,11 +561,59 @@
   }
 
 
+  .main-cont-s{
+    width: 100%;
+    
+    
+  }
+
   .main-cont{
     width: 100%;
     
     
   }
+
+
+  /* .main-cont-s{
+    width:100%;
+  } */
+
+
+  .side-bottom{
+    height:200px;
+    justify-content: center;
+    gap: 30px;
+    
+    
+
+  }
+
+
+
+  .side-bottom-block{
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 50%;
+    
+
+
+  }
+
+
+  .side-blk{
+    width: 90%;
+    height: 100%;
+    
+  }
+
+
+  .blk-det{
+    font-size: 15px;
+  }
+
+
+
+
 
   
 
@@ -593,6 +665,9 @@
   .register{
     width:30px;
     height: 30px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     
 
   }
@@ -608,7 +683,8 @@
 
   .A{
     display: block;
-    font-size: 20px;
+    font-size: 25px;
+
     
   }
 

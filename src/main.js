@@ -4,6 +4,7 @@ import bigil from "./bigil.png";
 import sarkar from "./sarkar.png";
 import kaththi from "./kaththi.png";
 import thuppaki from "./thuppaki.png"
+import { FaStar } from "react-icons/fa";
 
 
 
@@ -126,6 +127,36 @@ function Main({side}){
 
     return(
         <div className="main">
+            <div className={side ? "sidebar-s" : "sidebar"}>
+                <div className="side-top">
+                    <button className="s-button">Action</button>
+                    
+                    <button className="s-button">Comey</button>
+                    <button className="s-button">Sci-Fi</button>
+                    <button className="s-button">Thriller</button>
+                    <button className="s-button">Fantasy</button>
+                    <button className="s-button">Drama</button>
+                    
+                    <button className="s-button">Crime</button>
+                    <button className="s-button">History</button>
+
+                </div>
+
+                <div className="side-bottom">
+                    <div className="main-1-p">Top Rated</div>
+                    
+                    <div className="side-bottom-block">
+                        <Block sidebar={sidebar}/>
+                    </div>
+                </div>
+                
+
+            </div>
+
+
+
+
+
             <div className={side ? "main-cont-s" : "main-cont"}>
                 <div className="banner">
                     <div className="ban-img-1">
@@ -153,7 +184,7 @@ function Main({side}){
                                     <div  style={{backgroundImage:`url(${data.background})`}} className="main-1-block"> 
                                         <div className="main-block-p">
                                             <div>{data.name}<br></br><span className="year">{data.year}</span></div>
-                                            <div>star</div>
+                                            <div><span className="star"><FaStar/></span></div>
                                         </div>
                                         
                                     </div> 
@@ -181,7 +212,7 @@ function Main({side}){
                                     <div style={{backgroundImage:`url(${data.background})`}} className="main-1-block"> 
                                         <div  className="main-block-p">
                                             <div>{data.name}<br></br><span className="year">{data.year}</span></div>
-                                            <div>star</div>
+                                            <div><span className="star"><FaStar/></span></div>
                                         </div>
                                     </div> 
                                 )
@@ -198,31 +229,7 @@ function Main({side}){
 
             </div>
 
-            <div className={side ? "sidebar-s" : "sidebar"}>
-                <div className="side-top">
-                    <button className="s-button">Action</button>
-                    
-                    <button className="s-button">Comey</button>
-                    <button className="s-button">Sci-Fi</button>
-                    <button className="s-button">Thriller</button>
-                    <button className="s-button">Fantasy</button>
-                    <button className="s-button">Drama</button>
-                    
-                    <button className="s-button">Crime</button>
-                    <button className="s-button">History</button>
-
-                </div>
-
-                <div className="side-bottom">
-                    <div className="main-1-p">Top Rated</div>
-                    
-                    <div className="side-bottom-block">
-                        <Block sidebar={sidebar}/>
-                    </div>
-                </div>
-                
-
-            </div>
+            
 
         </div>
     )

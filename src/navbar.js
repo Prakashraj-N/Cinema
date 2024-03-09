@@ -1,4 +1,5 @@
 import { MdOutlineLight } from "react-icons/md";
+import { TbLayoutNavbarExpandFilled } from "react-icons/tb";
 
 
 
@@ -22,7 +23,7 @@ function Navbar({maintainMode,mode,maintainSide}){
             <div className="nav-other">
                 
                 <button className="register"><sapn className="A" >C</sapn><sapn className="reg">Register</sapn></button>
-                <button  className="register" onClick={maintainSide}><sapn className="A" >M</sapn><sapn className="reg">Menu</sapn></button>
+                <button  className="register" onClick={maintainSide}><sapn className="A" ><TbLayoutNavbarExpandFilled /></sapn><sapn className="reg">Menu</sapn></button>
 
             </div>
 
