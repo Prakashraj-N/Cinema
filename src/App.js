@@ -3,14 +3,17 @@ import './App.css';
 import Navbar from './navbar';
 import Main from './main';
 import { useState } from 'react';
+import Register from './register';
+
 
 function App() {
 
-  const [mode,setmode] = useState(true);
-  function maintainMode (){
-    setmode(!mode);
+  const [register,setregister] = useState(false);
+  function maintainRegister (){
+    setregister(!register);
 
-    
+    console.log(register)
+
   }
 
 
@@ -19,10 +22,22 @@ function App() {
     setside(!side);
 
 
-    console.log(side)
-
+    
     
   }
+
+
+  const [login,setlogin] = useState(false);
+  function maintainLogin (){
+    setlogin(!login);
+
+    console.log(login)
+
+  }
+
+
+
+
 
 
 
@@ -30,9 +45,10 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar maintainMode={maintainMode} maintainSide={maintainSide} mode={mode}/>
-      <Main mode={mode} side={side} />
       
+      <Navbar maintainRegister={maintainRegister} maintainSide={maintainSide} />
+      <Main  side={side} />
+      {register && <Register login={login} maintainLogin={maintainLogin} />}
     </div>
   );
 }
